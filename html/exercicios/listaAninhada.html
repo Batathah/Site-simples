@@ -1,0 +1,48 @@
+<H1>Projeto</H1>
+<ul class="tree"><!-- Forma de indicar que é uma classe(lista) do tipo arvore-->
+    <li>
+        <span wm-folder>Backend</span>
+        <ul>
+            <li>
+                <span wm-folder>App</span>
+                <ul>
+                    <li>produto.js</li>
+                    <li>Usuario.js</li>
+                    <li>venda.js</li>
+                </ul>
+            </li>
+            <li>
+                <span wm-folder>Config</span>
+                <ul>
+                    <li>banco.js</li>
+                    <li>rotas.js</li>
+                    <li>servidor.js</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <span wm-folder>Frontend</span>
+        <ul>
+            <li>
+                <span wm-folder>Public</span>
+                <ul>
+                    <li>app.css</li>
+                    <li>app.js</li>
+                    <li>index.html</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
+
+<link rel="stylesheet" href="http://files.cod3r.com.br/curso-web/tree.css">
+<script>
+    document.querySelectorAll('[wm-folder]').forEach(folder => {
+        folder.onclick = function (e) {
+            const ul =folder.nextElementSibling
+            const d = ul.style.display
+            ul.style.display = d === 'nome' ? 'block' : 'nome'
+        }
+    })
+</script>
